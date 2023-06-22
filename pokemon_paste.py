@@ -28,7 +28,13 @@ def get_pokemon_name():
     Returns:
         str: Pokemon name
     """
-    # TODO: Function body
+    #Function body
+    if len(sys.argv) >= 2:
+        return sys.argv[1]
+    else:
+        print('Error: Search term not provided, No pokemon was found')
+        sys.exit('Script execution aborted')
+
     return
 
 def get_paste_data(pokemon_info):
@@ -40,9 +46,20 @@ def get_paste_data(pokemon_info):
     Returns:
         (str, str): Title and body text for the PasteBin paste
     """    
-    # TODO: Build the paste title
+    #Build the paste title
+    poke_name = pokemon_info['poke_name'].capitalize()
+    title = f'{poke_name} abilities'
+
+
     # TODO: Build the paste body text
-    return # (title, body_text)
+    body_text = ''
+    for poke_name in pokemon_info['results']:
+        body_text += poke_name['abilities'] + '\n\n'
+
+
+
+
+    return (title, body_text)
 
 if __name__ == '__main__':
     main()

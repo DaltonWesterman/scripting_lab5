@@ -5,13 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "dad joke paste",
+            "name": "Pokemon Paste",
             "type": "python",
             "request": "launch",
-            "program": "dad_joke_paste.py",
+            "program": "poke_api.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args": ["hipster"]
+            "args": ["pokemon name"]
         }
     ]
 }
